@@ -1,0 +1,37 @@
+<h2>Add Product </h2>
+  
+<div style="width: 100%">
+ <form [formGroup]="productForm" (submit)="onFormSubmit()" class="example-form"
+ >
+    
+   <mat-form-field class="example-full-width">
+      <mat-label>Name:</mat-label>
+      <input matInput placeholder="Mandar" formControlName="name">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+       <mat-label>Category:</mat-label>
+       <input matInput placeholder="Category" formControlName="category">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Serial no:</mat-label>
+      <input matInput placeholder="Serial no" formControlName="serialNo">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>StockCount:</mat-label>
+      <input matInput placeholder="StockCount" formControlName="stockCount">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Price:</mat-label>
+      <input matInput placeholder="Price" formControlName="price">
+   </mat-form-field>
+ 
+  
+   <button mat-raised-button type="submit" [disabled]='!productForm.valid'>Add Product</button>
+  
+ </form>
+</div>
+ 
